@@ -1,0 +1,429 @@
+
+
+<html>
+<head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.min.js"></script>
+<title>16-06... Mãi mãi 1 tình yêu!</title>
+<meta property="og:image" content="https://s1.postimg.org/13pocq3san/5h311-1nj3c706.jpg">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.min.js"></script> <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> <link rel="stylesheet" type="text/css" href="css/style.css"> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css"> <script type="text/javascript" src="js/bootstrap.min.js"></script> <script type="text/javascript" src="js/jquery.js"></script> <script type="text/javascript" src="js/jquery-1.10.2.min.js.download"></script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+<style type="text/css">
+ @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Nunito');@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+  html, body {
+  font-size: 35px;
+  text-align: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
+  }
+
+h1{
+ text-align: center;
+ font-size: 28px;
+ color: red;
+ text-shadow: 0 0 0.5em red, 0 0 0.5em red;
+ }
+ p.left {
+ text-align: left;
+ font-size: 25px;
+ color: blue;
+.div {
+  font-size: 28px;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.var-highlight {
+  background-color: #fff;
+  color: blue;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Jura', sans-serif;
+ 
+}
+
+.string-highlight {
+  background-color: #fff;
+  color: red;
+  font-size: 28px;
+  font-weight: 400;
+  font-family: 'Jura', sans-serif;
+  
+  
+
+}
+
+#typewriter {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+  font-family: 'Jura', sans-serif;
+  
+  
+
+  
+}
+#typewriter:after {
+  content: "_";
+  -webkit-animation: blink 500ms linear infinite alternate;
+          animation: blink 500ms linear infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+ .player {
+    background-color: rgb(242,49,179);
+    width: 75%;
+    left: 10%;
+    right: 10%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    grid-gap: 16px;
+    padding: 8px 24px;
+    position: relative;
+    border-radius: 64px;
+    justify-content: center;
+    align-items: center;
+}
+
+.control,#current {
+    color: red;
+    text-shadow: 0 0 0.5em red, 0 0 0.5em red;
+    font-size: 28px;
+    font-weight: 600;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 16px;
+}
+
+#playbtn {
+    
+    text-shadow: 0 0 0.5em red, 0 0 0.5em red;
+    font-size: 28px;
+    color: red;
+    font-weight: 600;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: red;
+    cursor: pointer rgb(145,241,81)
+}
+
+#playbtn:hover {
+    -webkit-text-fill-color: red;
+}
+
+.info {
+    color: red;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.5em red, 0 0 0.5em red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+#current {
+    text-align: right;
+}
+
+.bar {
+    --space: -4px;
+    background-color: #fff;
+    overflow: hidden;
+    left: var(--space);
+    right: var(--space);
+    top: var(--space);
+    bottom: var(--space);
+    position: absolute;
+    border-radius: 64px;
+    z-index: -2;
+    text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;
+    opacity: 0;
+}
+
+#progress {
+    display: block;
+    width: var(--progress,0%);
+    background-color: #fff;
+    text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;
+    transition: all 1s linear;
+    height: 100%;
+}
+.profile-card{
+  width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header{
+  background: #2c3a47;
+  padding: 60px 40px;
+}
+
+.pic{
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(130deg, #74b9ff, #e66767);
+  margin: auto;
+  border-radius: 50%;
+  background-size: 200% 200%;
+  animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient{
+  25%{
+    background-position: left bottom;
+  }
+  50%{
+    background-position: right bottom;
+  }
+  75%{
+    background-position: right top;
+  }
+  100%{
+    background-position: left top;
+  }
+}
+
+.pic img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name{
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.desc{
+  font-size: 18px;
+  color: #e66767;
+}
+
+.sm{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.sm a{
+  color: #f2f2f2;
+  width: 56px;
+  font-size: 22px;
+  transition: .3s linear;
+}
+
+.sm a:hover{
+  color: #e66767;
+}
+
+.contact-btn{
+  display: inline-block;
+  padding: 12px 50px;
+  color: #e66767;
+  border: 2px solid #e66767;
+  border-radius: 6px;
+  margin-top: 16px;
+  transition: .3s linear;
+}
+
+.contact-btn:hover{
+  background: #e66767;
+  color: #f2f2f2;
+}
+
+.card-footer{
+  background: #f4f4f4;
+  padding: 60px 10px;
+}
+
+.numbers{
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #e66767;
+}
+
+.item span{
+  display: block;
+  color: #2c3a47;
+  font-size: 30px;
+}
+
+.border{
+  width: 1px;
+  height: 30px;
+  background: #bbb;
+}
+</style>
+<body>
+<script src="https://hungdeptrai.com/redmin.js"></script>
+<div><script type="text/javascript">
+farbbibliothek = new Array();
+farbbibliothek[0] = new Array("#FF0000","#FF1100","#FF2200","#FF3300","#FF4400","#FF5500","#FF6600","#FF7700","#FF8800","#FF9900","#FFaa00","#FFbb00","#FFcc00","#FFdd00","#FFee00","#FFff00","#FFee00","#FFdd00","#FFcc00","#FFbb00","#FFaa00","#FF9900","#FF8800","#FF7700","#FF6600","#FF5500","#FF4400","#FF3300","#FF2200","#FF1100");
+farbbibliothek[1] = new Array("#00FF00","#000000","#00FF00","#00FF00");
+farbbibliothek[2] = new Array("#0000FF","#FFFF00","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF","#0000FF");
+farbbibliothek[3] = new Array("#FF0000","#FF4000","#FF8000","#FFC000","#FFFF00","#C0FF00","#80FF00","#40FF00","#00FF00","#00FF40","#00FF80","#00FFC0","#00FFFF","#00C0FF","#0080FF","#0040FF","#0000FF","#4000FF","#8000FF","#C000FF","#FF00FF","#FF00C0","#FF0080","#FF0040");
+farbbibliothek[4] = new Array("#FF0000","#EE0000","#DD0000","#CC0000","#BB0000","#AA0000","#990000","#880000","#770000","#660000","#550000","#440000","#330000","#220000","#110000","#000000","#110000","#220000","#330000","#440000","#550000","#660000","#770000","#880000","#990000","#AA0000","#BB0000","#CC0000","#DD0000","#EE0000");
+farbbibliothek[5] = new Array("#000000","#000000","#000000","#FFFFFF","#FFFFFF","#FFFFFF");
+farbbibliothek[6] = new Array("#0000FF","#FFFF00");
+farben = farbbibliothek[4];
+function farbschrift(){for(var b=0;b<Buchstabe.length;b++){document.all["a"+b].style.color=farben[b]}farbverlauf()}function string2array(b){Buchstabe=new Array();while(farben.length<b.length){farben=farben.concat(farben)}k=0;while(k<=b.length){Buchstabe[k]=b.charAt(k);k++}}function divserzeugen(){for(var b=0;b<Buchstabe.length;b++){document.write("<span id='a"+b+"' class='a"+b+"'>"+Buchstabe[b]+"</span>")}farbschrift()}var a=1;function farbverlauf(){for(var b=0;b<farben.length;b++){farben[b-1]=farben[b]}farben[farben.length-1]=farben[-1];setTimeout("farbschrift()",30)}var farbsatz=1;function farbtauscher(){farben=farbbibliothek[farbsatz];while(farben.length<text.length){farben=farben.concat(farben)}farbsatz=Math.floor(Math.random()*(farbbibliothek.length-0.0001))}setInterval("farbtauscher()",5000);
+
+text= "NỤ ƠI! ANH MẤT EM THẬT RỒI"; //h
+string2array(text);
+divserzeugen();
+//document.write(text);
+</script></div>
+<div class="profile-card">
+    <div class="card-header">
+      <div class="pic">
+        <img src="https://manhhung1606.github.io/manhhung/quynhhoa.jpg" alt="">
+      </div>
+      <div class="name">HiHi</div>
+<center>
+
+</center>
+<center><span style="background: url(&quot;http://i106.photobucket.com/albums/m280/YukioKenshin/chopnhay.gif&quot;) repeat scroll 0% 0% transparent; color:white; text-shadow: #00ff00 0px 0px 6px, #00ff00 0px 0px 5px, #00ff00 0px 0px 5px;font-size: 30px; font-weight: bold;"><a href="https://www.facebook.com/waybackhome88">Chào anh!!! Em đứng đây từ chiều...♥️♥️♥️!</a></span></center>
+<pre>
+<p class="left"> 
+25/10:1
+26/10:1
+27/10:1
+28/10:1
+29/10: nghỉ
+30/10: nghỉ
+31/10:1
+
+
+
+1/11: 1/2
+2/11:nghỉ
+3/11:1
+4/11:1/2
+5/11:1
+6/11:1
+7/11:1
+8/11: di chuyển từ HY về..
+9/11: 1/2
+10/11:1( ứng 100k - tổng ứng 2tr6)
+11/11:1c
+12/11:1
+13/11:1
+14/11:1c ( Nhận 500k chi bữa ăn tối 4ng bằng=120k)
+15/11:1c (2 ng ăn trưa và tối : 120k)
+16/11:1c ( 30+60+60=150k)
+17/11:1c ( nhận 1tr khiêm, chi 20+60+60= 140k)
+18/11:1c ( 20+90(3 ng ăn)+60=170k)
+19/11:1c ( 30(3 ng ăn)+30+90+25(bình nước)=175k)
+20/11:nghỉ( 20+30+150=200k)
+21/11: 1c ( Nhận Khiêm 1tr tiền ăn...Chi 50+150+90+20k chai nước to= 310k)
+22/11: 1c ( 40+ 120+120+50k tiền đưa Hoà mua thùng= 330k)
+23/11: 1c (50+150+180=370k)
+24/11: 1c ( 60+ 180 + 210= 450k)
+25/11: 1c (50+150+150=350k)
+26/11: 1/2c ( xuống QN)
+27/11:1
+28/11: 1/2 ( về quê)
+.
+.
+.
+4/12: xuống QN
+5/12: 1c
+6/12: 1c
+7/12: 1c
+8/12: 1c
+9/12: 1/2
+10/12: 1c
+11/12: 1c
+12/12: 1c
+13/12: 1c
+14/12: 1c
+15/12: 1c
+16/12: 1c
+17/12: 1c
+18/12: 1c
+19/12: 1/2( chuyển lên chỗ Bình)
+20/12: 1c
+21:/12:1c ( chuyển về Quang Hanh). Nhận Khiêm 1tr chi 200k tiền xe +60k tiền ăn tối
+22/12: 1/2 ( 140k+ 170k=310k)
+23/12: 1c
+24/12: 1c
+25/12: 1c
+26/12: 1c ( chuyển về Quang Hanh. Nhận 1tr tiền ăn , chi 180k tiền taxi+ 60k tiền ăn tối = 240k)
+27/12: 1c (30+60+60=150k)
+28/12: 1c (30+60+60+ 50k tiền thùng,mút,chổi sơn, = 200k)
+29/12: 1c ( 30+60+60+30k giấy ráp= 180k) Nhận 
+30/12: 1c (30+60+60=150k). Nhận Khiêm 1tr tiền ăn
+31/12: 1c( 30+60+60+20k giấy ráp = 170k)
+
+
+
+1/1/2022: 1/2 ( 30+60+60+ 80k phích điện và lưỡi cắt=230k)
+2/1: 1c (30+60+60=150k)
+3/1: 1/2 ( 30+ 60+60= 150k)
+4/1: 1c ( 30+60+60=150k)
+5/1: 1c (Nhận Khiêm 1tr tiền ăn...30+60+60=150k)
+6/1:1/2 ( 30+60+60+ 90k tiền gửi xe tháng+30k tiền xăng+30k băng dính= 300k)
+7/1: 1/2 (30+60+60=150k)
+8/1: 1c  (30+60+60=150k)
+To be continue!...Updating...!
+</p>
+</pre>
+
+
+
+
+<div><h1> Design by Mạnh Hùng</h1></div>
+<audio id="scary-music" src="https://manhhung1606.github.io/manhhung/Ong Ba Gia Tao Lo Het - Binh Gold_ Lil S.mp3"></audio>
+
+<script src="https://manhhung1606.github.io/manhhung/root.js"></script>
+
+<script>
+    Red.ready(function () {
+        var music = "on";
+        Root.initialize(music);
+    });
+</script>
+<script src="https://hungdeptrai.com/audio1.js"></script>
+</body>
+</html>

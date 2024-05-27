@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+.contentt {
+    position: relative;
+    z-index: 3;
+  }
+  
+  #txtReason{
+  font-size: 37px;
+  font-color: #FAFAFA;
+  text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;    
+  }
+
+  #snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  #no{
+    position: absolute;
+    display: inline-block;
+    left: 20%; 
+    z-index: 999;
+    -webkit-transition: all 0.1s ease-out;
+  }
+  #yes{
+    position: absolute;
+    display: inline-block;
+    left: 75%; 
+    z-index: 999;
+    -webkit-transition: all 0.3s ease-out;
+  }
+  #bg{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 30%;
+  left: 0;
+  height: 30vh; 
+ }
+.divContainer
+{
+    vertical-align: middle;
+    font-family: 'Jura', sans-serif;
+    font-size: 37px;
+    color: #FAFAFA !important;
+    text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;
+    text-align: center; <!-- If you want horizontal center alignment -->
+}
+.divContainer > *
+{
+    vertical-align: middle;
+}
+.swal2-image{
+  object-fit: contain;
+  top: 30%;
+}
+
+.swal2-title, .swal2-content{
+  font-family: 'Jura', sans-serif;
+  font-size: 37px;
+  color: #FAFAFA !important;
+  text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;
+}
+.swal2-popup {
+  border-radius: 10px !important;
+}
+
+header h2 {
+  color: #FAFAFA!important;
+  text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;
+  font-family: 'Jura', sans-serif;
+  font-size: 37px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+header h4 {
+  color: #FAFAFA !important;
+  text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;
+  font-family: 'Jura', sans-serif;
+  font-size: 37px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  header h2 {
+    font-family: 'Jura', sans-serif;
+    color: #FAFAFA !important;
+    text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;
+    font-size: 37px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  header h4 {
+    
+    font-family: 'Jura', sans-serif;
+    color: #FAFAFA !important;
+    font-size: 37px;
+    text-shadow: 0 0 0.5em cyan, 0 0 0.5em cyan;
+    text-align: center;
+    padding: 30px;
+  }
+  #no{
+    position: absolute;
+    display: inline-block;
+    left: 7%; 
+    bottom: 20vh;
+    font-size: 30px;
+    padding: 3px;
+    z-index: 999;
+    -webkit-transition: all 0.1s ease-out;
+  }
+  #yes{
+    position: absolute;
+    display: inline-block;
+    left: 58%; 
+    bottom: 20vh;
+    font-size: 30px;
+    padding: 3px;
+    z-index: 999;
+    -webkit-transition: all 0.3s ease-out;
+  }
+
+
+.swal2-backdrop-show{
+  background-size: 50px 50px !important;
+  top: 30% !important;
+  position: fixed;
+}
+ 

@@ -1,0 +1,23 @@
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+
+.slider-wrapper {
+        height: 500px; 
+	width: 920px;
+	margin: 100px auto;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
